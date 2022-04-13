@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar{
+    height: 5vh;
+    border-bottom: 1px solid red;
+    /* width: 75vw; */
+    padding-top:1rem;
+}
