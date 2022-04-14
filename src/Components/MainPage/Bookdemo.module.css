@@ -1,0 +1,26 @@
+.container{
+    
+    margin-left:5rem;
+}
+
+.heading{
+    text-align: left;
+}
+
+.border{
+    display: flex;
+    flex-direction: row;
+}
+
+.border_red{
+    width: 5vw;
+    border-radius: 3px;
+    margin-right: 5vw;
+    border-bottom: 3px solid red;
+}
+
+.border_blue{
+    width: 5vw;
+    border-radius: 3px;
+    border-bottom: 3px solid blue;
+}
