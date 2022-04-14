@@ -30,7 +30,7 @@ const Card = (props) => {
   };
 
   const carditems = props.data.map((item) => (
-    <Carditems key={i++} data={item} setData={dataHandler} />
+    <Carditems key={i++} data={item} setData={dataHandler} selectedData={enteredData}/>
   ));
 
   console.log(enteredData);
@@ -39,6 +39,23 @@ const Card = (props) => {
   const timeSlots = enteredData.available.map((item)=>(
     <Slotitems key={j++} data={item}></Slotitems>
   ))
+
+  const clickHandler =()=>{
+    setenteredData({
+      date: "",
+      available: [
+        {
+          hour: 0,
+          min: 0,
+        },
+        {
+          hour: 0,
+          min: 0,
+        },
+      ],
+    },)
+    setisSlotvisible(false)
+  }
  
   return (
     <div className={classes.container}>
@@ -46,7 +63,7 @@ const Card = (props) => {
       {isSlotvisible && <h3>Select Slot</h3>}
       {isSlotvisible && <div className={classes.cards}>{timeSlots}</div>}
 
-      {isSlotvisible && <button className={classes.submit}>Proceed to Pay</button>}
+      {isSlotvisible && <button className={classes.submit} onClick={clickHandler}>Proceed to Pay</button>}
     </div>
   );
 };

@@ -12,12 +12,18 @@ const Carditems = (props) => {
 
     const giveData = () =>{
       props.setData(props.data)
-      
+    }
+    let buttonStyle
+
+    if(props.selectedData === props.data){
+      buttonStyle = `${classes.selectedbutton}`
+    }else{
+      buttonStyle = `${classes.cardbutton}`
     }
 
   return (
     <div className={classes.container} onClick={props.onClick}>
-        <button className={classes.cardbutton} onClick={giveData}>
+        <button className={buttonStyle} onClick={giveData}>
         <span className={classes.subhead}>{day}</span><br></br>
         <span>{date.getDate()}</span><br></br>
         <span className={classes.subhead}>{month}</span>

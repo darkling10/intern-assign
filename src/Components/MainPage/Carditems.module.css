@@ -21,3 +21,15 @@
     background-color: #289125;
     color: white;
 }
+
+.selectedbutton{
+    padding: 1rem;
+    border: 2px solid #104085;
+    border-radius: 5px;
+    margin: 1rem;
+    width:5vw;
+    font-weight: 600;
+    font-size: medium;
+    background-color: #289125;
+    color: white;
+}
