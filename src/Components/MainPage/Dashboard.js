@@ -1,6 +1,6 @@
 import React from "react";
-import Carditems from "./Carditems";
-import classes from "./Dashboard.module.css";
+import Card from "./Card";
+
 
 const DUMMY_DATA = [
   {
@@ -58,18 +58,17 @@ const DUMMY_DATA = [
 ];
 
 const Dashboard = () => {
-  let i=0
-  const carditems = DUMMY_DATA.map((item)=>(
-    
-    <Carditems key={i++} data={item}/>
-  ))
+  
+  
+
+  const headtag = {"textAlign":"left"}
 
   return (
     <div>
-      <h3>Select Date</h3>
-      <div className={classes.cards}>
-      {carditems}
-      </div>
+     <h3 style={headtag}>Select Date</h3>
+      
+      <Card data={DUMMY_DATA}/>
+      
     </div>
   );
 };
