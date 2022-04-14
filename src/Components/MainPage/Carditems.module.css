@@ -29,3 +29,13 @@
     background-color: #289125;
     color: white;
 }
+
+@media (max-width:736px) {
+    .cardbutton{
+        width: 17vw;
+    }
+
+    .selectedbutton{
+        width: 17vw;
+    }
+}

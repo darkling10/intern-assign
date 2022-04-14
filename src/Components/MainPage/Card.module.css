@@ -4,13 +4,15 @@
 
 
 
+
 .container h3{
     text-align: left;
 }
 
 .submit{
-    background-color:  #e8f2ff;
-    color:#000000;
+    background: rgb(0,23,59);
+    background: linear-gradient(90deg, rgba(0,23,59,1) 45%, rgba(32,57,94,1) 100%);
+    color: white;
     border: none;
     border-radius: 5px;
     padding: 1rem 3rem;
@@ -24,3 +26,14 @@
     background: linear-gradient(90deg, rgba(0,23,59,1) 45%, rgba(32,57,94,1) 100%);
     color: white;
 }
+
+
+@media screen and (max-width: 736px) {
+    .cards{
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+    }
+    
+    
+  }
