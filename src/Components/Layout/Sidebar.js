@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "../Sidebar/Button";
-import classes from './Sidebar.module.css'
 
 const Sidebar = () => {
   return (

@@ -1,63 +1,19 @@
-import React from "react";
+import React, { useEffect,useState} from "react";
 import Card from "./Card";
 
 
-const DUMMY_DATA = [
-  {
-    date: "2022-03-22T00:00:00.000Z",
-    available: [
-      {
-        hour: 6,
-        min: 30,
-      },
-      {
-        hour: 7,
-        min: 0,
-      },
-    ],
-  },
-  {
-    date: "2022-03-23T00:00:00.000Z",
-    available: [
-      {
-        hour: 5,
-        min: 0,
-      },
-      {
-        hour: 7,
-        min: 0,
-      },
-    ],
-  },
-  {
-    date: "2022-03-24T00:00:00.000Z",
-    available: [
-      {
-        hour: 5,
-        min: 0,
-      },
-      {
-        hour: 7,
-        min: 0,
-      },
-    ],
-  },
-  {
-    date: "2022-03-25T00:00:00.000Z",
-    available: [
-      {
-        hour: 2,
-        min: 0,
-      },
-      {
-        hour: 4,
-        min: 0,
-      },
-    ],
-  },
-];
-
 const Dashboard = () => {
+  const [data,setData]=  useState([]);;
+
+  useEffect(() => {
+    fetch("https://mentorplus.s3.ap-south-1.amazonaws.com/config/availability.json")
+    .then(response => response.json())
+        
+    .then(data =>setData(prevState => {
+      
+      return [...prevState, ...data];
+    }))
+  },[])
   
   
 
@@ -67,7 +23,7 @@ const Dashboard = () => {
     <div>
      <h3 style={headtag}>Select Date</h3>
       
-      <Card data={DUMMY_DATA}/>
+      <Card data={data}/>
       
     </div>
   );
