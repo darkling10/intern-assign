@@ -17,8 +17,13 @@
     border-radius: 5px;
     padding: 1rem 3rem;
     font-weight: 600;
-    align-items: left;
-    margin-left: -43rem;
+    text-align: left;
+    margin-right: 3rem;
+}
+
+.divbutton{
+    text-align: left;
+    margin-left: 1rem;
 }
 
 .submit:focus{
@@ -31,9 +36,11 @@
 @media screen and (max-width: 736px) {
     .cards{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 20vw;
     }
     
-    
+    .submit{
+        justify-content: left;
+    }
   }

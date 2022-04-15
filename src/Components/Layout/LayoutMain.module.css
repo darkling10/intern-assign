@@ -1,7 +1,7 @@
 .layout{
     display: flex;
     /* margin-right: 10rem; */
-    
+    flex-direction: row;
 }
 
 .sidebar{
@@ -15,3 +15,36 @@
 .mainpage{
     width:75vw
 }
+
+.headtag{
+    margin-left: 3rem;
+    text-align: left;
+}
+
+.mentor{
+    color:#163157
+}
+.plus{
+    color:#da0d3d;
+}
+
+
+
+@media (max-width: 736px) {
+    .sidebar{
+        display: none;
+    }
+
+    .layout{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mainpage{
+        margin-left: 0;
+    }
+
+    .headtag{
+        text-align: none;
+    }
+  }

@@ -1,11 +1,18 @@
-import React from "react";
+import React, { Fragment } from "react";
 import MainPage from "./MainPage";
 import Sidebar from "./Sidebar";
 import classes from "./LayoutMain.module.css";
 
 const LayoutMain = () => {
   return (
-    <div className={classes.layout}>
+    <Fragment>
+    <div>
+        <h2 className={classes.headtag}>
+          <span className={classes.mentor}>Mentor</span>
+          <span className={classes.plus}>Plus</span>
+        </h2>
+      </div>
+        <div className={classes.layout}>
       <div className={classes.sidebar}>
         <Sidebar />
       </div>
@@ -13,6 +20,7 @@ const LayoutMain = () => {
         <MainPage />
       </div>
     </div>
+    </Fragment>
   );
 };
 

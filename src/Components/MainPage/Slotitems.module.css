@@ -1,5 +1,4 @@
 .button{
-    
         padding: 1rem;
         border: 2px solid #104085;
         border-radius: 5px;
@@ -14,3 +13,14 @@
     background-color: #289125;
     color: white;
 }
+
+@media screen and (max-width: 736px) {
+    .button{
+        width:25vw;
+    }
+
+    .button:focus{
+        background-color: #289125;
+        color: white;
+    }
+  }
